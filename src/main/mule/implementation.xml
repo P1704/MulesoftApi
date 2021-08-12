@@ -42,7 +42,8 @@ payload	]]></ee:set-payload>
 		<logger level="INFO" doc:name="Logger" doc:id="07c19244-bb62-44db-a597-13a8a7e698f0" />
 	</flow>
 	<sub-flow name="setCode" doc:id="1bd78ffc-deb4-4389-89f5-d4d5f3cc8e8d">
-		<set-variable value="#[message.attributes.queryParams.code default 'SFO']" doc:name="code" doc:id="1165d983-1d85-4f91-b858-6a536ca11d3c" variableName="code" />
+		<set-variable value="#[message.attributes.queryParams.code default 'LAX']" doc:name="code" doc:id="1165d983-1d85-4f91-b858-6a536ca11d3c" variableName="code" />
+		<logger level="INFO" doc:name="For Github" doc:id="64c6368e-ba6a-4da5-bba2-b9a6bb53ffdb" message='#["Github"]'/>
 	</sub-flow>
 	<flow name="getAllAirlineFlights" doc:id="ff5d1dcc-e725-47ad-b104-8d424680bf24">
 		<scatter-gather doc:name="Scatter-Gather" doc:id="6e9373ee-65d0-492e-b082-bfcb10bdece7">
